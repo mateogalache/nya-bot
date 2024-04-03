@@ -21,6 +21,6 @@
         </style>
     </head>
     <body class="antialiased">
-            NYA-BOT
+            NYA-BOT!!!
     </body>
 </html>
