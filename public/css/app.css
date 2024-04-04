@@ -1,0 +1,59 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header{
+    width: 100%;
+    background: #28A21E;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+main {
+    margin: 0;
+    padding-top: 5rem;
+    padding-left: 3rem;
+    background-image: url('../images/background_nya-bot.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.products{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-shop{
+    height: 324px;
+    width: 249px;
+    border-radius: 28px;
+    object-fit: contain;
+    background: white;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-shop img{
+    object-fit: contain;
+    height: 80%;
+    width: 100%;
+}
+
+.product-shop h3{
+    margin-top: 1rem;
+}
+
