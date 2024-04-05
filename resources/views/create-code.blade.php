@@ -22,7 +22,13 @@
             <div class="form-group">
                 {!! Form::text('keyword', $request->keyword, ['class' => 'keyword', 'placeholder' => 'Palabra clave']) !!}
             </div>
+
+            <div class="form-group">
+                {!! Form::select('type', ['C' => 'C', 'Python' => 'Python'], $request->type, ['class' => 'form-control keyword']) !!}
             </div>
+            </div>
+
+
 
 
             <div class="form-group">

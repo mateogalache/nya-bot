@@ -20,7 +20,8 @@ class CreateCodeController extends Controller
             'code' => $request->code,
             'title' => $request->title,
             'description' => $request->description,
-            'keyword' => $request->keyword
+            'keyword' => $request->keyword,
+            'type' => $request->type
         ]);
 
         return view('create-code',compact('request'));

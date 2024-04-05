@@ -8,7 +8,7 @@ use App\Models\User;
 
 class Codes extends Model
 {
-    protected $fillable = ['user_id', 'code', 'title','description', 'keyword'];
+    protected $fillable = ['user_id', 'code', 'title','description', 'keyword','type'];
 
     // Define la relación con el modelo User
     public function user()
