@@ -30,8 +30,7 @@ Route::get('/test-db-connection', function () {
 
 
 
-Route::get('/create', [CreateCodeController::class, 'createCode'])->name('create');
-Route::post('/create', [CreateCodeController::class, 'postCode'])->name('create');
+
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
@@ -45,6 +44,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::middleware('auth')->group(function () {
     Route::get('/shop');
     Route::get('/create', [CreateCodeController::class, 'createCode'])->name('create');
+    Route::post('/create', [CreateCodeController::class, 'postCode'])->name('create');
     Route::get('/community', [CommunityController::class, 'showCommunityForm'])->name('community');
 });
 
