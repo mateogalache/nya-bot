@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +15,21 @@ use App\Http\Controllers\RegisterController;
 | contains the "web" middleware group. Now create something great!
 |
 */
- 
-Route::get('/register', [RegisterController::class, 'register'])->name('register');
-//Route::post('/register', [RegisterController::class, 'registerPost'])->name('register');
-    
 
+
+Route::get('/test-db-connection', function () {
+    try {
+        DB::connection()->getPdo();
+        return "Conexión exitosa a la base de datos.";
+    } catch (\Exception $e) {
+        return "Error al conectar a la base de datos: " . $e->getMessage();
+    }
+});
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+    
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 Route::get('/shop', function () {
     return view('shop');
