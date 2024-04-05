@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CreateCodeController;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\CommunityController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,15 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
+
+Route::middleware('auth')->group(function () {
+    Route::get('/shop');
+    Route::get('/create', [CreateCodeController::class, 'createCode'])->name('create');
+    Route::get('/community', [CommunityController::class, 'showCommunityForm'])->name('community');
+});
 
 Route::get('/shop', function () {
     return view('shop');

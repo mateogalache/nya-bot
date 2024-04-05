@@ -17,6 +17,7 @@
 
             <input type="submit" value="Login">
         </form>
+        <p>¿No tienes una cuenta? <a href="{{ route('register') }}">Regístrate aquí</a></p>
     </div>
 
 @endsection

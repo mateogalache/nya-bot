@@ -20,6 +20,7 @@
 
             <input type="submit" value="Register">
         </form>
+        <p>¿Ya tienes cuenta? <a href="{{ route('login') }}">Inicia sesión aquí</a></p>
     </div>
 
 @endsection
