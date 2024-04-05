@@ -17,6 +17,7 @@
         <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css" />
+        <link href="{{asset('css/create.css')}}" rel="stylesheet" type="text/css" />
 
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2567917163914793"
         crossorigin="anonymous"></script>

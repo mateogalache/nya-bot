@@ -1,0 +1,45 @@
+.text {
+    margin-top: 2rem;
+    height: 30rem;
+    width: 90%;
+    color: white;
+    background: black;
+    border-radius: 28px;
+    border: 5px solid #28A21E;
+    padding: 10px; /* Añadir relleno para una apariencia mejorada */
+    resize: none; /* Deshabilitar la redimensión */
+}
+
+.title,.description,.keyword{
+    display: flex;
+    align-items: center;
+    border: 2px solid black !important;
+    border-radius: 50px !important;
+    background: transparent;
+    color: black;
+}
+
+.create{
+    border-radius: 50px !important;
+    background: #28A21E !important;
+    max-width: 10rem;
+}
+
+.title{
+    max-width: 10rem;
+}
+
+.description{
+    max-width: 20rem;
+}
+
+.keyword{
+    max-width: 10rem;
+}
+
+.tdes{
+    margin-top: 2rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
