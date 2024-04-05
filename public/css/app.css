@@ -57,7 +57,7 @@ main {
     margin-top: 1rem;
 }
 
-/* Define styles for the container */
+
 .box-principal {
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -68,7 +68,7 @@ main {
     animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Define styles for headings */
+
 h2 {
     text-align: center;
     color: #333;
@@ -76,14 +76,14 @@ h2 {
     font-size: 24px;
 }
 
-/* Define styles for labels */
+
 label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
 }
 
-/* Define styles for input fields */
+
 input[type="text"],
 input[type="email"],
 input[type="password"] {
@@ -95,7 +95,7 @@ input[type="password"] {
     transition: all 0.3s ease;
 }
 
-/* Define styles for input fields on focus */
+
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
@@ -103,7 +103,7 @@ input[type="password"]:focus {
     box-shadow: 0px 0px 10px rgba(0, 123, 255, 0.3);
 }
 
-/* Define styles for submit button */
+
 input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -115,12 +115,12 @@ input[type="submit"] {
     transition: all 0.3s ease;
 }
 
-/* Define styles for submit button on hover */
+
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-/* Define keyframes for fade in animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -131,5 +131,8 @@ input[type="submit"]:hover {
         transform: translateY(0);
     }
 }
+
+
+
 
 

@@ -21,6 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-            NYA-BOT!!!
+            <h1>NYA-BOT!!</h1>
+            <a href="{{ route('login') }}">Login</a>
+            <a href="{{ route('register') }}">Register</a>
     </body>
 </html>
