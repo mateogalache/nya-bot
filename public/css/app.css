@@ -133,6 +133,49 @@ input[type="submit"]:hover {
 }
 
 
+/* Estilos para las secciones */
+.box-principalhome {
+    text-align: center;
+}
+
+.sectionshome {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.sectionhome {
+    width: 200px;
+}
+
+.section-buttonhome {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.section-imghome {
+    width: 150px; /* Ajusta el tamaño de las imágenes */
+    height: 150px; /* Ajusta el tamaño de las imágenes */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sectionhome h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Estilos para los botones de inicio de sesión y registro */
+.auth-links {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.auth-links .btn {
+    margin-left: 10px; /* Espaciado entre los botones */
+}
 
 
 
