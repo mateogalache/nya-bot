@@ -233,5 +233,13 @@ input[type="submit"]:hover {
     color: #6c757d; /* Color del texto */
 }
 
+a{
+    text-decoration: none;
+}
+
+
+
+
+
 
 
