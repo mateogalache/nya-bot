@@ -2,10 +2,10 @@
 
 @section('content')
     <div class="box-principalcodeshow">
-        <h1>CODE SHOW</h1>
+        <h2>{{ $code->title }}</h2>
 
         <div class="code-detailscodeshow">
-            <h2>{{ $code->title }}</h2>
+            
             <p>{{ $code->description }}</p>
             <pre><code>{{ $code->code }}</code></pre>
             
