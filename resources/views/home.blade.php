@@ -28,6 +28,7 @@
     <div class="auth-links">
     @auth
         <a href="{{ route('logout') }}" class="btn btn-primary">Cerrar sesión</a>
+        <a href="{{ route('userProfile') }}" class="btn btn-primary">Perfil</a>
     @else
         <a href="{{ route('login') }}" class="btn btn-primary">Iniciar sesión</a>
         <a href="{{ route('register') }}" class="btn btn-secondary">Registrarse</a>
