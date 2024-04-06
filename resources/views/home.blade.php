@@ -3,7 +3,7 @@
 
 @section('content')
     <div class="box-principalhome">
-   
+
         <div class="sectionshome">
             <div class="sectionhome">
                 <button class="section-buttonhome" onclick="location.href='/shop'">
@@ -28,7 +28,7 @@
     <div class="auth-links">
     @auth
         <a href="{{ route('logout') }}" class="btn btn-primary">Cerrar sesión</a>
-        <a href="{{ route('userProfile') }}" class="btn btn-primary">Perfil</a>
+        <a href="{{ route('profile') }}" class="btn btn-primary">Perfil</a>
     @else
         <a href="{{ route('login') }}" class="btn btn-primary">Iniciar sesión</a>
         <a href="{{ route('register') }}" class="btn btn-secondary">Registrarse</a>
