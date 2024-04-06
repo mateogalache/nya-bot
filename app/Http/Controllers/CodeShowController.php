@@ -24,7 +24,7 @@ class CodeShowController extends Controller
 
     public function postCode(Request $request)
     {
-        $this->ejecutarCodigoEnRaspberry($request);
+        //$this->ejecutarCodigoEnRaspberry($request);
 
         return redirect()->route('profile');
     }
@@ -33,8 +33,8 @@ class CodeShowController extends Controller
     {
         $host = 'tu_direccion_ip_raspberry'; // Cambia esto por la dirección IP de tu Raspberry Pi
         $port = 22; // Puerto SSH
-        $username = 'tu_usuario_raspberry'; // Nombre de usuario SSH de tu Raspberry Pi
-        $password = 'tu_contraseña_raspberry'; // Contraseña SSH de tu Raspberry Pi
+        $username = 'team3'; // Nombre de usuario SSH de tu Raspberry Pi
+        $password = 'team3'; // Contraseña SSH de tu Raspberry Pi
 
         // Crear una nueva instancia SSH
         $ssh = new SSH2($host, $port);
@@ -45,9 +45,11 @@ class CodeShowController extends Controller
         }
 
         // Obtener el código y la extensión desde la solicitud
+
         $codigo = $request->code;
         $nombreArchivo = str_replace(' ', '_', $request->title);
         $extension = ($request->type == 'C') ? 'c' : (($request->type == 'Python') ? 'py' : '');
+        $keyword = $request->keyword;
 
 
         // Guardar el código en la Raspberry Pi

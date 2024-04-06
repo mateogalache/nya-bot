@@ -17,7 +17,8 @@
 
                     {!! Form::hidden('title', $code->title) !!}
                     {!! Form::hidden('type', $code->type) !!}
-                    {!! Form::hidden('type', $code->code) !!}
+                    {!! Form::hidden('code', $code->code) !!}
+                    {!! Form::hidden('keyword', $code->keyword) !!}
                 {!! Form::submit('Enviar código a Raspberry Pi', ['class' => 'btn btn-primary']) !!}
             {!! Form::close() !!}
 
