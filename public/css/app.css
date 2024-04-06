@@ -37,6 +37,7 @@ main {
     width: 100%;
     gap: 2rem;
     margin-top: 2rem;
+    flex-wrap: wrap;
 }
 
 .product-shop{

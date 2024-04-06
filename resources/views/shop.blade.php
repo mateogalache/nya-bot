@@ -21,6 +21,34 @@
             <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
             <h3>LA SALLE</h3>
         </div>
+        <div class="product-shop">
+            <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
+            <h3>LA SALLE</h3>
+        </div>
+        <div class="product-shop">
+            <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
+            <h3>LA SALLE</h3>
+        </div>
+        <div class="product-shop">
+            <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
+            <h3>LA SALLE</h3>
+        </div>
+        <div class="product-shop">
+            <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
+            <h3>LA SALLE</h3>
+        </div>
+        <div class="product-shop">
+            <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
+            <h3>LA SALLE</h3>
+        </div>
+        <div class="product-shop">
+            <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
+            <h3>LA SALLE</h3>
+        </div>
+        <div class="product-shop">
+            <img src="{{asset('images/salle.png')}}" alt="" class="product-img" data-title="LA SALLE">
+            <h3>LA SALLE</h3>
+        </div>
     </div>
 </div>
 
