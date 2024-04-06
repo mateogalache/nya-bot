@@ -9,10 +9,15 @@
         {!! Form::close() !!}
 
         @foreach ($codes as $code)
-            {{-- Construir la URL de la imagen usando la variable $code->type --}}
-            <img src="{{ asset("images/{$code->type}.png") }}" alt="">
-            {{$code->title}}
-            {{$code->description}}
+        <a href="{{ route('codeshow', $code->id) }}" class="code-link">
+            <div class="codeperfil">
+                <img src="{{ asset("images/{$code->type}.png") }}"  alt="Logo" class="code-logo">
+                <div>
+                    <h3>{{ $code->title }}</h3>
+                    <p>{{ $code->description }}</p>
+                </div>
+            </div>
+        </a>
         @endforeach
 
     </div>
