@@ -53,6 +53,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/codeshow', [CodeShowController::class, 'showCodeForm'])->name('codeshow');
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/profile', [ProfileController::class, 'showProfileForm'])->name('profile');
+    Route::get('/codeshow/{id}', [CodeShowController::class, 'showCodeForm'])->name('codeshow');
+
+
+    
+    
 });
 
 Route::get('/shop', function () {
