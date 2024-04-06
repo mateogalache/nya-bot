@@ -5,6 +5,7 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CreateCodeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CodeShowController;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\CommunityController;
 
@@ -49,6 +50,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/create', [CreateCodeController::class, 'createCode'])->name('create');
     Route::post('/create', [CreateCodeController::class, 'postCode'])->name('create');
     Route::get('/community', [CommunityController::class, 'showCommunityForm'])->name('community');
+    Route::get('/codeshow', [CodeShowController::class, 'showCodeForm'])->name('codeshow');
 });
 
 Route::get('/shop', function () {

@@ -7,18 +7,22 @@
         <div class="profile-info">
             <p>Nombre: {{ Auth::user()->name }}</p>
             <p>Email: {{ Auth::user()->email }}</p>
-            <!-- Aquí puedes agregar más campos de información del usuario si los tienes -->
+            
 
             <h2>Códigos Creados</h2>
             @if (Auth::user()->codes->isEmpty())
                 <p>No hay códigos creados.</p>
             @else
                 @foreach (Auth::user()->codes as $code)
-                    <div class="codeperfil">
-                        <h3>{{ $code->title }}</h3>
-                        <p>{{ $code->description }}</p>
-                        <!-- Aquí puedes mostrar más información sobre el código si lo deseas -->
-                    </div>
+                    <a href="{{ route('codeshow', $code->id) }}" class="code-link">
+                        <div class="codeperfil">
+                            <img src="{{ $code->type === 'C' ? asset('images/logo_c.png') : asset('images/logo_python.png') }}" alt="Logo" class="code-logo">
+                            <div>
+                                <h3>{{ $code->title }}</h3>
+                                <p>{{ $code->description }}</p>
+                            </div>
+                        </div>
+                    </a>
                 @endforeach
             @endif
         </div>
