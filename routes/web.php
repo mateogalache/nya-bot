@@ -38,9 +38,9 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/profile', [ProfileController::class, 'showProfileForm'])->name('userProfile');
+
+
 
 
 
@@ -49,6 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/create', [CreateCodeController::class, 'createCode'])->name('create');
     Route::post('/create', [CreateCodeController::class, 'postCode'])->name('create');
     Route::get('/community', [CommunityController::class, 'showCommunityForm'])->name('community');
+    Route::get('/profile', [ProfileController::class, 'showProfileForm'])->name('userProfile');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 Route::get('/shop', function () {
