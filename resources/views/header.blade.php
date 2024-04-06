@@ -1,5 +1,7 @@
 <div class = "header">
-    <a href="/"><h2>NYA-BOT</h2></a>
+    <a href="/">
+        <img src="{{ asset('images/logo_companyy.png') }}" alt="NYA-BOT" class="logo">
+    </a>
     <div class="auth-links">
         @auth
             <a href="{{ route('logout') }}" class="btn btn-primary"><span class="material-symbols-outlined">
