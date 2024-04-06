@@ -3,7 +3,7 @@
     margin:0;
     box-sizing:border-box;
     font-family: "Roboto", sans-serif;
-    font-weight: 400;
+    font-weight: 1000;
     font-style: normal;
 }
 
@@ -49,6 +49,7 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .product-shop img{
@@ -216,6 +217,16 @@ input[type="submit"]:hover {
     align-items: center; /* Para alinear verticalmente */
 }
 
+.code-link{
+    position: relative;
+}
+
+.userCode{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
 .codeperfil:hover {
     transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
 }
@@ -324,6 +335,65 @@ a{
     display: flex;
     align-items: center;
 }
+
+/* Modal */
+.modal {
+    display: none; /* Ocultar modal por defecto */
+    position: fixed; /* Fijar posición */
+    z-index: 1; /* Sobreponer sobre otros elementos */
+    padding-top: 50px; /* Espacio encima del modal */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    overflow: auto; /* Habilitar desplazamiento */
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+  }
+
+  /* Contenido del modal */
+  .modal-content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 8rem;
+    transform: scale(1.3);
+    justify-content: center;
+    width: 80%; /* Ancho del contenido */
+    max-width: 700px; /* Máximo ancho del contenido */
+  }
+
+  /* Botón de cerrar */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .contenedor-imagen {
+    text-align: center; /* Centra horizontalmente el contenido */
+}
+
+.contenedor-imagen img {
+    max-width: 100%; /* La imagen no será más grande que su contenedor */
+    height: auto; /* Ajusta automáticamente la altura de la imagen */
+    display: block; /* Elimina el espacio adicional debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+
 
 
 

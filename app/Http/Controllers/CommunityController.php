@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Codes;
+use App\Models\User;
 
 class CommunityController extends Controller
 {
@@ -17,9 +18,10 @@ class CommunityController extends Controller
             $codes = $codes->where('title', 'like', '%' . $request->termino . '%');
         }
 
-        $codes = $codes->get(); // Obtener los resultados después de todas las operaciones de filtrado
-
-        return view('community', compact('codes'));
+        $codes = $codes->orderBy('title')->get();
+        // Obtener los resultados después de todas las operaciones de filtrado
+        $user = User::all();
+        return view('community', compact('codes','user'));
     }
 
 

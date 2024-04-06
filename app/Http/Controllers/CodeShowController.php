@@ -24,6 +24,8 @@ class CodeShowController extends Controller
 
     public function postCode(Request $request)
     {
+
+        //$this->guardarCodigoEnPC($request); //prueba en pc
         //$this->ejecutarCodigoEnRaspberry($request);
 
         return redirect()->route('profile');
@@ -52,11 +54,36 @@ class CodeShowController extends Controller
         $keyword = $request->keyword;
 
 
+        $comandoCrearCarpeta = "mkdir -p /aplicaciones";
+        $ssh->exec($comandoCrearCarpeta);
+
         // Guardar el código en la Raspberry Pi
         $rutaArchivo = "/aplicaciones/$nombreArchivo.$extension";
-        $comando = "echo '$codigo' > $rutaArchivo";
-        $ssh->exec($comando);
+        $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
+        $ssh->exec($comandoGuardarCodigo);
     }
+
+    private function guardarCodigoEnPC($request)
+{
+    // Obtener el código y la extensión desde la solicitud
+    $codigo = $request->code;
+    $nombreArchivo = str_replace(' ', '_', $request->title);
+    $extension = ($request->type == 'C') ? 'c' : (($request->type == 'Python') ? 'py' : '');
+    $keyword = $request->keyword;
+
+    // Ruta de la carpeta 'Aplicaciones' dentro de 'Documentos' en tu PC
+    $rutaCarpeta = 'C:/Users/Usuario/OneDrive - La Salle/Documents/Aplicaciones';
+
+    // Verificar si la carpeta existe, si no, crearla
+    if (!file_exists($rutaCarpeta)) {
+        mkdir($rutaCarpeta, 0777, true);
+    }
+
+    // Guardar el código en la carpeta 'Aplicaciones'
+    $rutaArchivo = $rutaCarpeta . "/$nombreArchivo.$extension";
+    file_put_contents($rutaArchivo, $codigo);
+}
+
 
 
 
