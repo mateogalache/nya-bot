@@ -8,7 +8,6 @@
 
             <div class="form-group">
                 {!! Form::textarea('code', $request->code, ['id' => 'code', 'class' => 'text', 'placeholder' => 'Código']) !!}
-
             </div>
 
             <div class="tdes">
@@ -38,22 +37,6 @@
 @endsection
 
 @section('js')
-<script>
-    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        lineNumbers: true,
-        indentUnit: 4,
-        theme: "default",
-        mode: "python" // Modo inicial para Python
-    });
-
-    // Evento para detectar cambios en el selector de lenguaje
-    document.getElementById('language-select').addEventListener('change', function () {
-        var mode = this.value === 'C' ? 'text/x-csrc' : 'python';
-        editor.setOption("mode", mode);
-    });
-</script>
-
-
-
 @endsection
+
 

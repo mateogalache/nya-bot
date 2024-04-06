@@ -24,6 +24,6 @@ class CreateCodeController extends Controller
             'type' => $request->type
         ]);
 
-        return view('create-code',compact('request'));
+        return redirect()->route('profile');
     }
 }

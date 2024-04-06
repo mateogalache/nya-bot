@@ -54,10 +54,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/profile', [ProfileController::class, 'showProfileForm'])->name('profile');
     Route::get('/codeshow/{id}', [CodeShowController::class, 'showCodeForm'])->name('codeshow');
+    Route::post('/codeshow/{id}', [CodeShowController::class, 'postCode'])->name('codeshow');
 
 
-    
-    
+
+
 });
 
 Route::get('/shop', function () {

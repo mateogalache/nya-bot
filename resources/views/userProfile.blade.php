@@ -13,7 +13,7 @@
             @if (Auth::user()->codes->isEmpty())
                 <p>No hay códigos creados.</p>
             @else
-                @foreach (Auth::user()->codes as $code)
+                @foreach (Auth::user()->codes->sortByDesc('created_at') as $code)
                     <a href="{{ route('codeshow', $code->id) }}" class="code-link">
                         <div class="codeperfil">
                             <img src="{{ asset("images/{$code->type}.png") }}"  alt="Logo" class="code-logo">

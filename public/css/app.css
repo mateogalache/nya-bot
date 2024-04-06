@@ -24,9 +24,12 @@ main {
     background-image: url('../images/background_nya-bot.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    min-height: calc(100vh - 70px);
+    background-repeat: repeat; /* Repite la imagen continuamente */
+    min-height: calc(100vh - 70px); /* Establece la altura mínima para que la imagen de fondo cubra toda la pantalla */
 }
+
+
+
 
 .products{
     display: flex;
@@ -304,6 +307,24 @@ input[type="submit"]:hover {
 a{
     text-decoration: none;
 }
+
+.preCode{
+    height:35rem;
+    position: relative;
+}
+
+.copy-button {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde arriba según sea necesario */
+    right: 10px; /* Ajusta la distancia desde la derecha según sea necesario */
+    z-index: 1000; /* Asegura que el botón esté en la parte superior */
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
 
 
 
