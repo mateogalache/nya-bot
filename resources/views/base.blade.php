@@ -8,14 +8,14 @@
     <meta content="NYA-BOT" name="author" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- App favicon -->
-    <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}">
+    <link rel="shortcut icon" href="{{ secure_asset('images/favicon.ico') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <!-- App css -->
-    <link href="{{asset('css/app.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('css/create.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ secure_asset('css/create.css') }}" rel="stylesheet" type="text/css" />
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
