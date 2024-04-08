@@ -3,27 +3,29 @@
 @section('content')
     <div class="box-principal">
         <h1>COMUNIDAD</h1>
-        {!! Form::open(['route' => 'community', 'method' => 'GET']) !!}
-            {!! Form::text('termino', $request->termino ?? null, ['placeholder' => 'Buscar...']) !!}
-            {!! Form::submit('Buscar') !!}
+        {!! Form::open(['route' => 'community', 'method' => 'GET', 'class' => 'search-community']) !!}
+            {!! Form::text('termino', $request->termino ?? null, ['placeholder' => 'Buscar...', 'class' => 'buscar']) !!}
+            {!! Form::button('<span class="material-symbols-outlined">search</span>', ['type' => 'submit', 'class' => 'search', 'id' => 'searchButton']) !!}
         {!! Form::close() !!}
+
 
         @foreach ($codes as $code)
         @php
             $user = $user->where('id',$code->user_id)->first();
         @endphp
-        <a href="{{ route('codeshow', $code->id) }}" class="code-link">
-            <small class="userCode">{{$user->name}}</small>
-            <div class="codeperfil">
+            <a href="{{ route('codeshow', $code->id) }}" class="codeperfil">
+                <small class="userCode">{{$user->name}}</small>
                 <img src="{{ asset("images/{$code->type}.png") }}"  alt="Logo" class="code-logo">
                 <div>
                     <h3>{{ $code->title }}</h3>
                     <p>{{ $code->description }}</p>
 
                 </div>
-            </div>
+            </a>
         </a>
         @endforeach
+
+
 
     </div>
 @endsection

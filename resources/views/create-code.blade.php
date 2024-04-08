@@ -3,7 +3,6 @@
 @section('content')
     <div class="box-principal">
         <h1>CREAR</h1>
-
         {!! Form::open(['route' => 'create']) !!}
 
             <div class="form-group">

@@ -18,7 +18,7 @@
             <label for="confirm_password">Confirm Password:</label><br>
             <input type="password" id="confirm_password" name="password_confirmation" required><br><br>
 
-            <input type="submit" value="Register">
+            <input type="submit" value="Register" class="loginButton">
         </form>
         <p>¿Ya tienes cuenta? <a href="{{ route('login') }}">Inicia sesión aquí</a></p>
     </div>

@@ -15,7 +15,7 @@
 
 
 
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" class="loginButton">
         </form>
         <p>¿No tienes una cuenta? <a href="{{ route('register') }}">Regístrate aquí</a></p>
     </div>

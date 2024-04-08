@@ -9,12 +9,14 @@
 
 .header{
     width: 100%;
-    background: #dceb11;
+    background: #FFC300;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    position: fixed;
+    z-index: 1000000;
 }
 .logo {
     width: 100px; /* Ancho deseado de la imagen */
@@ -27,10 +29,9 @@ main {
     padding-top: 5rem;
     padding-left: 3rem;
     background-image: url('../images/background_nya-bot.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat; /* Repite la imagen continuamente */
-    min-height: calc(100vh - 70px); /* Establece la altura mínima para que la imagen de fondo cubra toda la pantalla */
+    background-repeat: repeat;
+    min-height: calc(100vh - 70px);
+    padding-bottom: 5rem;
 }
 
 
@@ -150,7 +151,7 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    
+
 }
 
 .sectionshome {
@@ -188,7 +189,6 @@ input[type="submit"]:hover {
 /* Estilos para los botones de inicio de sesión y registro */
 .auth-links {
     position: absolute;
-    top: 20px;
     right: 20px;
 }
 
@@ -212,11 +212,22 @@ input[type="submit"]:hover {
     background-color: #000000; /* Cambia el color de fondo al pasar el mouse */
 }
 
+.profile-container{
+    display: flex;
+    align-items: center;
+}
 
-/* Estilos específicos para la vista de perfil */
-.box-principalperfil {
-    text-align: center;
-    margin-top: 50px; /* Espacio superior */
+.codes-created{
+    margin-left: 25rem;
+    width: 100%;
+    padding: 3rem;
+}
+
+.codes-created .codes{
+    border-radius: 10px;
+    border: 2px solid #FFC300;
+    padding: 1rem;
+    width: 100%;
 }
 
 .profile-info {
@@ -224,8 +235,9 @@ input[type="submit"]:hover {
     border-radius: 10px; /* Borde redondeado */
     padding: 20px; /* Espaciado interno */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra */
-    max-width: 600px; /* Ancho máximo */
-    margin: 0 auto 20px auto; /* Margen superior e inferior automático */
+    width: 800px; /* Ancho máximo */
+    margin-top: -10rem;
+
 }
 .codes-created h2 {
     font-size: 1.5rem; /* Tamaño de fuente */
@@ -247,6 +259,7 @@ input[type="submit"]:hover {
 
 /* Estilos para los códigos creados */
 .codeperfil {
+    position: relative;
     background-color: #ffffff; /* Color de fondo */
     border: 1px solid #dee2e6; /* Borde */
     border-radius: 10px; /* Borde redondeado */
@@ -265,6 +278,8 @@ input[type="submit"]:hover {
 }
 
 .userCode{
+    text-decoration: none;
+    color: lightgray;
     position: absolute;
     right: 10px;
     top: 10px;
@@ -364,7 +379,7 @@ input[type="submit"]:hover {
 /* Estilos para el botón */
 .code-detailscodeshow .btn {
     padding: 12px 24px;
-    background-color: #007bff;
+    background-color: #FFC300;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -430,7 +445,7 @@ a{
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: #FFC300;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
@@ -455,10 +470,59 @@ a{
 }
 
 
+.search-community{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: start !important;
+    display:flex;
+    align-items: center !important;
+    gap: 1rem;
+}
 
+.search{
+    cursor: pointer;
+    background: #FFC300 !important;
+    color: black !important;
+    width: 30px !important;
+    height: 30px !important;
+    border: none !important;
+    border-radius:  50% !important;
+}
 
+.buscar{
+    margin-bottom: 0 !important;
+    width: 30rem !important;
+}
 
+.footer{
+    height: 5rem;
+    width: 100%;
+    background: #FFC300;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
 
+.contacto{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.redes img{
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+}
+
+.yt{
+    transform: scale(.8);
+}
+
+.loginButton{
+    background-color: #FFC300 !important;
+}
 
 
 

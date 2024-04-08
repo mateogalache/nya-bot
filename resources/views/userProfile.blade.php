@@ -14,21 +14,24 @@
 
             <div class="codes-created">
                 <h2>Códigos Creados</h2>
-                @if (Auth::user()->codes->isEmpty())
-                    <p>No hay códigos creados.</p>
-                @else
-                    @foreach (Auth::user()->codes->sortByDesc('created_at') as $code)
-                        <a href="{{ route('codeshow', $code->id) }}" class="code-link">
-                            <div class="codeperfil">
+                <div class="codes">
+                    @if (Auth::user()->codes->isEmpty())
+                        <p>No hay códigos creados.</p>
+                    @else
+                        @foreach (Auth::user()->codes->sortByDesc('created_at') as $code)
+
+                            <a href="{{ route('codeshow', $code->id) }}" class="codeperfil">
                                 <img src="{{ asset("images/{$code->type}.png") }}"  alt="Logo" class="code-logo">
                                 <div>
                                     <h3>{{ $code->title }}</h3>
                                     <p>{{ $code->description }}</p>
                                 </div>
-                            </div>
-                        </a>
-                    @endforeach
-                @endif
+                            </a>
+
+                        @endforeach
+                    @endif
+                </div>
+
             </div>
         </div>
     </div>

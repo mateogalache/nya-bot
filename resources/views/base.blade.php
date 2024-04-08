@@ -34,7 +34,7 @@
 </main>
 
 <footer>
-
+    @include('footer')
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
