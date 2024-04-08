@@ -155,8 +155,26 @@ input[type="submit"]:hover {
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
+
+@media only screen and (max-width: 800px) {
+    .sectionshome{
+        flex-direction: column;
+    }
+
+    .section-imghome{
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .header{
+        justify-content: start;
+    }
+  }
 
 .sectionshome {
     display: flex;
@@ -498,7 +516,7 @@ a{
     width: 30rem !important;
 }
 
-.footer{
+.footer1{
     height: 5rem;
     width: 100%;
     background: #FFC300;

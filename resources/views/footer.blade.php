@@ -1,4 +1,4 @@
-<div class="footer">
+<div class="footer1">
     <h3>NYA-BOT</h3>
     <div class="contacto">
         <h4>
