@@ -26,8 +26,7 @@
 
 main {
     margin: 0;
-    padding-top: 5rem;
-    padding-left: 3rem;
+    padding: 5rem;
     background-image: url('../images/background_nya-bot.png');
     background-repeat: repeat;
     min-height: calc(100vh - 70px);
@@ -157,37 +156,19 @@ input[type="submit"]:hover {
     height: 100vh;
 }
 
-@media only screen and (max-width: 800px) {
-    .sectionshome{
-        flex-direction: column;
-    }
 
-    .section-imghome{
-        width: 100px !important;
-        height: 100px !important;
-    }
-
-    footer{
-        display: none;
-    }
-
-    .header{
-        justify-content: start;
-    }
-  }
 
 .sectionshome {
     display: flex;
     justify-content: center; /* Centra los botones horizontalmente */
     max-width: 800px; /* Establece el ancho máximo de los botones */
     width: 100%;
+    margin-top: -5rem;
+    gap: 5rem;
 }
 
 .sectionhome {
     text-align: center;
-    margin-right: 60px; /* Agrega un margen derecho para separar los botones */
-    margin-left: 60px; /* Agrega un margen izquierdo para separar los botones */
-    margin-bottom: 150px;
 }
 
 .section-buttonhome {
@@ -546,6 +527,103 @@ a{
     background-color: #FFC300 !important;
 }
 
+@media only screen and (max-width: 800px) {
+    .buscar{
+        width: 20rem !important;
+    }
+    .createForm{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .create{
+        display: flex;
+        justify-content: center;
+    }
+    .tdes{
+        flex-direction:column;
+    }
+    .text{
+        width: 20rem !important;
+        margin:2rem;
+    }
+    .codes-created h2{
+        display: flex;
+        justify-content: center;
+    }
+    .codes-created{
+        margin-left: 0;
+    }
+    .profile-info{
+        margin-top: 2rem !important;
+        width: 20rem !important;
+    }
+    .codes{
+        width: 17rem !important;
+    }
+    .codeperfil{
+        width: 15rem;
+        overflow: hidden;
+    }
+    .profile-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box-principalperfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .products{
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3rem;
+    }
+    .box-principal{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem;
+    }
+    main{
+        padding: 0;
+        padding-top: 5rem;
+    }
+    .box-principal1{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .box-principal1 p{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .sectionshome{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 100px;
+        gap: 1rem !important;
+    }
 
+    .section-imghome{
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .header{
+        justify-content: start;
+    }
+  }
 
 

@@ -3,7 +3,7 @@
 @section('content')
     <div class="box-principal">
         <h1>CREAR</h1>
-        {!! Form::open(['route' => 'create']) !!}
+        {!! Form::open(['route' => 'create','class' => 'createForm']) !!}
 
             <div class="form-group">
                 {!! Form::textarea('code', $request->code, ['id' => 'code', 'class' => 'text', 'placeholder' => 'Código']) !!}
@@ -27,9 +27,9 @@
             </div>
             </div>
 
-            <div class="form-group">
+
                 {!! Form::submit('Publicar', ['class' => 'create']) !!}
-            </div>
+
 
         {!! Form::close() !!}
     </div>
