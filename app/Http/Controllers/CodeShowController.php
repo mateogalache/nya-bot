@@ -26,63 +26,69 @@ class CodeShowController extends Controller
     {
 
         //$this->guardarCodigoEnPC($request); //prueba en pc
-        //$this->ejecutarCodigoEnRaspberry($request);
+        $this->ejecutarCodigoEnRaspberry($request);
 
         return redirect()->route('profile');
     }
 
     private function ejecutarCodigoEnRaspberry($request)
     {
-        $host = 'tu_direccion_ip_raspberry'; // Cambia esto por la dirección IP de tu Raspberry Pi
-        $port = 22; // Puerto SSH
-        $username = 'team3'; // Nombre de usuario SSH de tu Raspberry Pi
-        $password = 'team3'; // Contraseña SSH de tu Raspberry Pi
+        $host = '192.168.43.153';
+        $port = 22;
+        $username = 'team3';
+        $password = 'team3';
 
-        // Crear una nueva instancia SSH
         $ssh = new SSH2($host, $port);
 
-        // Intentar conectarse
         if (!$ssh->login($username, $password)) {
             exit('Error de autenticación');
         }
-
-        // Obtener el código y la extensión desde la solicitud
 
         $codigo = $request->code;
         $nombreArchivo = str_replace(' ', '_', $request->title);
         $extension = ($request->type == 'C') ? 'c' : (($request->type == 'Python') ? 'py' : '');
         $keyword = $request->keyword;
 
-
-        $comandoCrearCarpeta = "mkdir -p /aplicaciones";
+        $comandoCrearCarpeta = "mkdir -p /home/$username/aplicaciones";
         $ssh->exec($comandoCrearCarpeta);
 
-        // Guardar el código en la Raspberry Pi
-        $rutaArchivo = "/aplicaciones/$nombreArchivo.$extension";
+        $rutaArchivo = "/home/$username/aplicaciones/$nombreArchivo.$extension";
         $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
         $ssh->exec($comandoGuardarCodigo);
     }
 
     private function guardarCodigoEnPC($request)
-{
-    // Obtener el código y la extensión desde la solicitud
-    $codigo = $request->code;
-    $nombreArchivo = str_replace(' ', '_', $request->title);
-    $extension = ($request->type == 'C') ? 'c' : (($request->type == 'Python') ? 'py' : '');
-    $keyword = $request->keyword;
+    {
+        // Obtener el código y la extensión desde la solicitud
+        $codigo = $request->code;
+        $nombreArchivo = str_replace(' ', '_', $request->title);
+        $extension = ($request->type == 'C') ? 'c' : (($request->type == 'Python') ? 'py' : '');
+        $keyword = $request->keyword;
 
-    // Ruta de la carpeta 'Aplicaciones' dentro de 'Documentos' en tu PC
-    $rutaCarpeta = 'C:/Users/Usuario/OneDrive - La Salle/Documents/Aplicaciones';
+        // Ruta de la carpeta 'Aplicaciones' dentro de 'Documentos' en tu PC
+        $rutaCarpeta = 'C:/Users/Usuario/OneDrive - La Salle/Documents/Aplicaciones';
 
-    // Verificar si la carpeta existe, si no, crearla
-    if (!file_exists($rutaCarpeta)) {
-        mkdir($rutaCarpeta, 0777, true);
+        // Verificar si la carpeta existe, si no, crearla
+        if (!file_exists($rutaCarpeta)) {
+            mkdir($rutaCarpeta, 0777, true);
+        }
+
+        // Guardar el código en la carpeta 'Aplicaciones'
+        $rutaArchivo = $rutaCarpeta . "/$nombreArchivo.$extension";
+        file_put_contents($rutaArchivo, $codigo);
     }
 
-    // Guardar el código en la carpeta 'Aplicaciones'
-    $rutaArchivo = $rutaCarpeta . "/$nombreArchivo.$extension";
-    file_put_contents($rutaArchivo, $codigo);
-}
+/*private function obtenerIpRaspberry()
+{
+    $clienteAvahi = new AvahiClient();
+    $navegador = $clienteAvahi->createServiceBrowser();
+    $navegador->addListener(function ($client, $interface, $protocol, $name, $type, $domain, $flags) use (&$direccionIp) {
+        // La dirección IP se puede obtener a partir del nombre y el dominio
+        $direccionIp = gethostbyname("$name.$domain");
+    });
+    $navegador->browse();
+    return $direccionIp;
+}*/
 
 
 
