@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="codes-created">
+            <div class="codes-created"style="max-height: 400px; overflow-y: auto;">
                 <h2>Códigos Creados</h2>
                 <div class="codes">
                     @if (Auth::user()->codes->isEmpty())

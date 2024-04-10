@@ -8,8 +8,8 @@
             {!! Form::button('<span class="material-symbols-outlined">search</span>', ['type' => 'submit', 'class' => 'search', 'id' => 'searchButton']) !!}
         {!! Form::close() !!}
 
-
-        @foreach ($codes as $code)
+        <div class="allcodes" style="max-height: 500px; overflow-y: auto; max-width: 620px;">
+            @foreach ($codes as $code)
         @php
             $user = $user->where('id',$code->user_id)->first();
         @endphp
@@ -24,6 +24,8 @@
             </a>
         </a>
         @endforeach
+        </div>
+
 
 
 
