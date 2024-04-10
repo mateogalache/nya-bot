@@ -216,8 +216,9 @@ input[type="submit"]:hover {
 }
 
 .profile-container{
+    margin-top: 3rem;
     display: flex;
-    align-items: center;
+
 }
 
 .codes-created{
@@ -239,8 +240,7 @@ input[type="submit"]:hover {
     padding: 20px; /* Espaciado interno */
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra */
     width: 800px; /* Ancho máximo */
-    margin-top: -10rem;
-
+    height: 120px;
 }
 .codes-created h2 {
     font-size: 1.5rem; /* Tamaño de fuente */
@@ -557,7 +557,7 @@ a{
         margin-left: 0;
     }
     .profile-info{
-        margin-top: 2rem !important;
+
         width: 20rem !important;
     }
     .codes{
