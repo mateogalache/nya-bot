@@ -31,7 +31,7 @@ Route::get('/test-db-connection', function () {
 });
 
 
-
+Route::get('db', ['as' => 'db', 'uses' => 'App\Http\Controllers\DBController@showDB']);
 
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
