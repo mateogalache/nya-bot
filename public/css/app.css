@@ -12,11 +12,13 @@
     background: #FFC300;
     height: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     color: white;
     position: fixed;
     z-index: 1000000;
+    padding-inline: 1rem;
+    top:0;
 }
 .logo {
     width: 100px; /* Ancho deseado de la imagen */
@@ -25,12 +27,11 @@
 
 
 main {
-    margin: 0;
     padding: 5rem;
     background-image: url('../images/background_nya-bot.png');
     background-repeat: repeat;
     min-height: calc(100vh - 70px);
-    padding-bottom: 5rem;
+    padding-top: 1rem;
 }
 
 
@@ -75,6 +76,7 @@ main {
     padding: 30px;
     width: 400px;
     margin: 0 auto;
+    margin-top: 5rem;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -153,7 +155,11 @@ input[type="submit"]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 70px;
+    padding-top: 2rem;
+    gap: 2rem;
 }
 
 
@@ -189,11 +195,8 @@ input[type="submit"]:hover {
     margin: 0;
 }
 
-/* Estilos para los botones de inicio de sesión y registro */
-.auth-links {
-    position: absolute;
-    right: 20px;
-}
+
+
 
 .auth-links .btn {
     margin-left: 10px; /* Espaciado entre los botones */
@@ -505,6 +508,9 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    z-index: 100000000;
+    position: relative;
+    bottom:0;
 }
 
 .contacto{
@@ -525,6 +531,16 @@ a{
 
 .loginButton{
     background-color: #FFC300 !important;
+}
+
+.sections{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sections a{
+    color: white;
 }
 
 @media only screen and (max-width: 800px) {
@@ -591,11 +607,9 @@ a{
         align-items: center;
         flex-direction: column;
         padding: 2rem;
+
     }
-    main{
-        padding: 0;
-        padding-top: 5rem;
-    }
+
     .box-principal1{
         width: 300px;
         display: flex;
@@ -626,4 +640,123 @@ a{
     }
   }
 
+  .box-principal, .box-principalperfil{
+    padding-top: 5rem;
+  }
 
+  .homeboxes {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .homebox{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 40rem;
+    width: 50%;
+  }
+
+  .titlehome{
+    background: white;
+    width: 100%;
+    height: 5rem;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 30px 30px 0 0;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .titlehome a{
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid black;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .titlehome a *{
+
+    transform: scale(1.5);
+
+  }
+
+  .imgdes{
+    background: #FFC300;
+    width: 100%;
+    height: 45rem;
+    border-radius: 0 0 30px 30px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .imagenbox{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imagenbox2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imagenbox img,.imagenbox2 img{
+    border-radius: 30px;
+    height: 35rem;
+    width: 35rem;
+  }
+
+  .homebox2{
+    width: 71.5%;
+    margin-top: 8rem;
+  }
+  .imgdes2{
+    flex-direction: row;
+  }
+
+  .descriptionbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .price{
+    color: white;
+    font-weight: 600;
+    font-size: 64px;
+  }
+
+  .descriptionbox button{
+    color: black !important;
+    background: white;
+    border:none;
+    padding: 1rem;
+    border-radius: 30px;
+    width: 20rem;
+  }
+
+  .descriptionbox button h1{
+    color: black;
+  }
