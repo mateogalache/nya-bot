@@ -55,6 +55,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'showProfileForm'])->name('profile');
     Route::get('/codeshow/{id}', [CodeShowController::class, 'showCodeForm'])->name('codeshow');
     Route::post('/codeshow/{id}', [CodeShowController::class, 'postCode'])->name('codeshow');
+    Route::post('/code/{id}/edit', [CodeShowController::class, 'edit'])->name('code.edit');
+
 
 
 

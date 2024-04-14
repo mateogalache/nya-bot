@@ -7,23 +7,37 @@
         <div class="code-detailscodeshow">
             <p>{{ $code->description }}</p>
             <pre class="preCode"><code>{{ $code->code }}</code>
-                <!-- Botón de copiar -->
-                <button id="copyButton" class="copy-button">
-                    <span class="material-symbols-outlined">content_copy</span>
-                    <span id="copyMessage" style="display: none; color: green;">Copiado</span>
-                </button>
+                <!-- Contenedor para botones -->
+                <div class="button-container">
+                    <!-- Botón de copiar -->
+                    <button id="copyButton" class="copy-button">
+                        <span class="material-symbols-outlined">content_copy</span>
+                        <span id="copyMessage" style="display: none; color: green;">Copiado</span>
+                    </button>
+                    <!-- Botón de editar -->
+                    <button id="editButton" class="edit-button">
+                        <span class="material-symbols-outlined">edit</span> <!-- Icono de edición -->
+                    </button>
+                </div>
             </pre>
+            <!-- Formulario para editar código -->
+            <form id="editForm" method="POST" action="{{ route('code.edit', $code->id) }}" style="display: none;">
+                @csrf
+                <div class="form-group">
+                    <label for="editedCode">Editar Código:</label>
+                    <textarea class="form-control" id="editedCode" name="editedCode" rows="5">{{ $code->code }}</textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </form>
+
+            <!-- Formulario para enviar código a Raspberry Pi -->
             {!! Form::open(['route' => ['codeshow', $code->id], 'method' => 'POST']) !!}
-
-                    {!! Form::hidden('title', $code->title) !!}
-                    {!! Form::hidden('type', $code->type) !!}
-                    {!! Form::hidden('code', $code->code) !!}
-                    {!! Form::hidden('keyword', $code->keyword) !!}
-                {!! Form::submit('Enviar código a Raspberry Pi', ['class' => 'btn btn-primary']) !!}
+                {!! Form::hidden('title', $code->title) !!}
+                {!! Form::hidden('type', $code->type) !!}
+                {!! Form::hidden('code', $code->code) !!}
+                {!! Form::hidden('keyword', $code->keyword) !!}
+                {!! Form::submit('Enviar código a Raspberry Pi', ['class' => 'btn btn-success']) !!}
             {!! Form::close() !!}
-
-
-
         </div>
     </div>
 @endsection
@@ -55,9 +69,19 @@
             }, 2000);
         }
 
+        // Función para mostrar el formulario de edición al hacer clic en el botón de editar
+        function showEditForm() {
+            document.getElementById('editForm').style.display = 'block';
+        }
+
         // Agrega un evento de clic al botón de copiar
         document.getElementById('copyButton').addEventListener('click', function() {
             copyCodeToClipboard();
+        });
+
+        // Agrega un evento de clic al botón de editar
+        document.getElementById('editButton').addEventListener('click', function() {
+            showEditForm();
         });
     </script>
 @endsection

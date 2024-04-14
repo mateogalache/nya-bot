@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Codes;
 
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use phpseclib3\Net\SSH2; // Necesitarás importar la clase SSH2 desde la biblioteca phpseclib
@@ -29,6 +30,16 @@ class CodeShowController extends Controller
         $this->ejecutarCodigoEnRaspberry($request);
 
         return redirect()->route('profile');
+    }
+    public function edit(Request $request, $id)
+    {
+        // Validar los datos del formulario de edición si es necesario
+
+        $code = Codes::find($id);
+        $code->code = $request->input('editedCode');
+        $code->save();
+
+        return redirect()->back()->with('success', 'Código actualizado exitosamente');
     }
 
     private function ejecutarCodigoEnRaspberry($request)

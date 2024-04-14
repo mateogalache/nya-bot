@@ -417,6 +417,18 @@ a{
     display: flex;
     align-items: center;
 }
+.edit-button{
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde arriba según sea necesario */
+    right: 40px; /* Ajusta la distancia desde la derecha según sea necesario */
+    z-index: 1000; /* Asegura que el botón esté en la parte superior */
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
 
 /* Modal */
 .modal {
