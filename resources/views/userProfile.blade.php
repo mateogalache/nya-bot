@@ -9,6 +9,8 @@
                 <div class="profile-details">
                     <p>Nombre: {{ Auth::user()->name }}</p>
                     <p>Email: {{ Auth::user()->email }}</p>
+                    <p><strong>Fecha de Registro:</strong> {{ Auth::user()->created_at->format('d/m/Y') }}</p>
+                
                 </div>
             </div>
 
