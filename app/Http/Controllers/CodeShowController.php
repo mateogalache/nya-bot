@@ -66,6 +66,24 @@ class CodeShowController extends Controller
         $rutaArchivo = "/home/$username/aplicaciones/$nombreArchivo.$extension";
         $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
         $ssh->exec($comandoGuardarCodigo);
+
+        $rutaArchivo = "/home/$username/aplicaciones/$nombreArchivo.$extension";
+        $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
+        $ssh->exec($comandoGuardarCodigo);
+
+        // Comando para actualizar el script prueba.py
+        $rutaArchivo = "/home/$username/aplicaciones/$nombreArchivo.$extension";
+        $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
+        $ssh->exec($comandoGuardarCodigo);
+
+        // Comando para actualizar el script prueba.py
+        $comandoActualizarScript = "sed -i '/^archivos =/s/\]/, \"$nombreArchivo.$extension\"\]/' /home/$username/Kaldi-stt/prueba2.py";
+        $comandoActualizarScript .= " && ";
+        $comandoActualizarScript .= "sed -i '/^keywords =/s/\]/, \"$keyword\"\]/' /home/$username/Kaldi-stt/prueba2.py";
+        $ssh->exec($comandoActualizarScript);
+
+
+        ///home/$username/Kaldi-stt/prueba.py
     }
 
     private function guardarCodigoEnPC($request)

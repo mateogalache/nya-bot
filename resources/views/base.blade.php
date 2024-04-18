@@ -41,7 +41,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/codemirror.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/clike/clike.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.63.1/mode/python/python.min.js"></script>
+<script>
+     // Cargar el editor después de que se haya cargado la página
+     require.config({ paths: { 'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.0/min/vs' }});
+    require(['vs/editor/editor.main'], function() {
+        // Configurar el tema oscuro
+        monaco.editor.defineTheme('dark', {
+            base: 'vs-dark',
+            inherit: true,
+            rules: [{ background: '212121' }],
+            colors: {}
+        });
+        // Crear una instancia del editor
+        var editor = monaco.editor.create(document.getElementById('editor'), {
+            value: '# Escribe tu código aquí...',
+            language: 'python', // Establecer el lenguaje por defecto como Python
+            theme: 'dark' // Establecer el tema como oscuro
+        });
 
+        // Escuchar cambios en el campo de selección
+        document.getElementById('language-select').addEventListener('change', function() {
+            // Obtener el valor seleccionado
+            var selectedLanguage = this.value;
+            // Cambiar el lenguaje del editor
+            if(selectedLanguage === 'C') {
+                monaco.editor.setModelLanguage(editor.getModel(), 'c');
+            } else if(selectedLanguage === 'Python') {
+                monaco.editor.setModelLanguage(editor.getModel(), 'python');
+            }
+        });
+
+        // Escuchar cambios en el editor
+        editor.onDidChangeModelContent(function() {
+            // Obtener el contenido del editor
+            var code = editor.getValue();
+            // Asignar el código al campo oculto en el formulario
+            document.getElementById('code').value = code;
+        });
+    });
+</script>
 @yield('js')
 
 </body>

@@ -772,3 +772,12 @@ a{
   .descriptionbox button h1{
     color: black;
   }
+
+  .show{
+    display: flex;
+  }
+
+  .notshow{
+    display:none;
+  }
+
