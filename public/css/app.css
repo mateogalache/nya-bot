@@ -12,7 +12,8 @@
     background: #FFC300;
     height: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 35rem;
     align-items: center;
     color: white;
     position: fixed;
@@ -195,7 +196,9 @@ input[type="submit"]:hover {
     margin: 0;
 }
 
-
+.auth-links{
+    width: 5rem;
+}
 
 
 .auth-links .btn {
@@ -549,7 +552,10 @@ a{
     display: flex;
     align-items: center;
     gap: 2rem;
+    width: 5rem;
 }
+
+
 
 .sections a{
     color: white;
