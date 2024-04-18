@@ -781,3 +781,50 @@ a{
     display:none;
   }
 
+  .img_profile {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
+
+.profile_header {
+    position: relative;
+    cursor: pointer;
+}
+
+.navigation_profile {
+    position: absolute;
+    background: white;
+    border-radius: 11px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    left: -10rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    transition: all 300ms ease;
+}
+
+.navigation_profile a {
+    background: none !important;
+    color: black !important;
+    transition: background-color 0.3s ease; /* Transición para el cambio de color de fondo */
+}
+
+.navigation_profile a:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Fondo negro transparente al pasar el ratón */
+}
+
+.profile_toggle_checkbox {
+    display: none;
+}
+
+.profile_header .navigation_profile {
+    display: none;
+}
+
+.profile_toggle_checkbox:checked + .profile_header .navigation_profile {
+    display: block;
+}
+

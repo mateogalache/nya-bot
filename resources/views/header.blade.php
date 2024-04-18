@@ -9,12 +9,21 @@
     </a>
     <div class="auth-links">
         @auth
-            <a href="{{ route('logout') }}" class="btn btn-primary"><span class="material-symbols-outlined">
-                logout
-                </span></a>
-            <a href="{{ route('profile') }}" class="btn btn-primary"><span class="material-symbols-outlined">
-                person
-                </span></a>
+        <input type="checkbox" id="profile_toggle" class="profile_toggle_checkbox">
+        <label for="profile_toggle" class="profile_header">
+            <img class="img_profile" src="{{ Auth::user()->img ? asset('images/' . Auth::user()->img) : asset('images/prototipo.png') }}" alt="profile_image">
+            <span class="material-symbols-outlined" style="position:absolute; bottom:-.3rem; right:-.2rem;">
+                expand_more
+            </span>
+            <div class="navigation_profile">
+                <a href="{{ route('profile') }}">PROFILE</a>
+                <a href="{{ route('logout') }}">LOGOUT</a>
+                <a href="">NYA-BOT</a>
+                <a href="">DOCUMENTACIÓN</a>
+                <a href="">CONTÁCTANOS</a>
+            </div>
+        </label>
+
         @else
             <a href="{{ route('login') }}" class="btn btn-primary">INICIAR SESIÓN</a>
         @endauth
