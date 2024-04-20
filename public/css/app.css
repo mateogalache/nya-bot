@@ -12,8 +12,8 @@
     background: #FFC300;
     height: 70px;
     display: flex;
-    justify-content: center;
-    gap: 35rem;
+    justify-content: space-between;
+    gap: 35%;
     align-items: center;
     color: white;
     position: fixed;
@@ -197,7 +197,10 @@ input[type="submit"]:hover {
 }
 
 .auth-links{
-    width: 5rem;
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -552,7 +555,7 @@ a{
     display: flex;
     align-items: center;
     gap: 2rem;
-    width: 5rem;
+    width: 15rem;
 }
 
 

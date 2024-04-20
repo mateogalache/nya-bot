@@ -12,7 +12,7 @@
         <input type="checkbox" id="profile_toggle" class="profile_toggle_checkbox">
         <label for="profile_toggle" class="profile_header">
             <img class="img_profile" src="{{ Auth::user()->img ? asset('images/' . Auth::user()->img) : asset('images/prototipo.png') }}" alt="profile_image">
-            <span class="material-symbols-outlined" style="position:absolute; bottom:-.3rem; right:1.5rem;">
+            <span class="material-symbols-outlined" style="position:absolute; bottom:-.3rem; right:-.5rem;">
                 expand_more
             </span>
             <div class="navigation_profile">
@@ -25,7 +25,7 @@
         </label>
 
         @else
-            <a href="{{ route('login') }}" class="btn btn-primary">INICIAR SESIÓN</a>
+            <a href="{{ route('login') }}" class="btn btn-primary" style="width: 10rem;">INICIAR SESIÓN</a>
         @endauth
     </div>
 </div>
