@@ -24,6 +24,11 @@
     background: #FFC300 !important;
     max-width: 10rem;
 }
+.send{
+    border-radius: 50px !important;
+    max-width: 10rem;
+    margin-top: 2rem;
+}
 
 .title{
     max-width: 10rem;

@@ -7,16 +7,16 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    
-    public function showProfileForm()
+
+    public function showProfileForm(Request $request)
     {
-        return view('userProfile');
+        return view('userProfile',compact('request'));
     }
 
-    
-    
 
-    
 
-    
+
+
+
+
 }

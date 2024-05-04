@@ -49,6 +49,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/shop');
     Route::get('/create', [CreateCodeController::class, 'createCode'])->name('create');
     Route::post('/create', [CreateCodeController::class, 'postCode'])->name('create');
+    Route::post('/send', [CreateCodeController::class, 'sendCode'])->name('send');
     Route::get('/community', [CommunityController::class, 'showCommunityForm'])->name('community');
     Route::get('/codeshow', [CodeShowController::class, 'showCodeForm'])->name('codeshow');
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');

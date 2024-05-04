@@ -27,10 +27,16 @@
                 <div class="form-group">
                     {!! Form::select('type', ['Python' => 'Python','C' => 'C'], $request->type, ['id' => 'language-select', 'class' => 'form-control keyword']) !!}
                 </div>
+                <div class="form-group">
+                    {!! Form::select('private', [false => 'Público',true => 'Privado'], $request->private, ['id' => 'privacy-select', 'class' => 'form-control keyword']) !!}
+                </div>
             </div>
 
             {!! Form::submit('Publicar', ['class' => 'create']) !!}
 
+        {!! Form::close() !!}
+        {!! Form::open(['route' => 'send','class' => 'createForm']) !!}
+            {!! Form::submit('Enviar a la placa', ['class' => 'send bg-primary']) !!}
         {!! Form::close() !!}
     </div>
 @endsection

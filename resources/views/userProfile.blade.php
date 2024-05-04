@@ -10,17 +10,20 @@
                     <p>Nombre: {{ Auth::user()->name }}</p>
                     <p>Email: {{ Auth::user()->email }}</p>
                     <p><strong>Fecha de Registro:</strong> {{ Auth::user()->created_at->format('d/m/Y') }}</p>
-                
+
                 </div>
             </div>
 
             <div class="codes-created"style="max-height: 400px; overflow-y: auto;">
                 <h2>Códigos Creados</h2>
+                <div class="form-group">
+                    {!! Form::select('private', [false => 'Público',true => 'Privado'], $request->private, ['id' => 'privacy-select', 'class' => 'form-control keyword']) !!}
+                </div>
                 <div class="codes">
                     @if (Auth::user()->codes->isEmpty())
                         <p>No hay códigos creados.</p>
                     @else
-                        @foreach (Auth::user()->codes->sortByDesc('created_at') as $code)
+                        @foreach (Auth::user()->codes->where('private',$request->private)->sortByDesc('created_at') as $code)
 
                             <a href="{{ route('codeshow', $code->id) }}" class="codeperfil">
                                 <img src="{{ asset("images/{$code->type}.png") }}"  alt="Logo" class="code-logo">
@@ -40,4 +43,11 @@
 @endsection
 
 @section('js')
+<script>
+    document.getElementById('privacy-select').addEventListener('change', function() {
+        var selectedValue = this.value;
+        window.location.href = '{{ route("profile") }}?private=' + selectedValue;
+    });
+</script>
+
 @endsection
