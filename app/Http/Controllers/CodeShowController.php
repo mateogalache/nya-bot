@@ -77,9 +77,9 @@ class CodeShowController extends Controller
         $ssh->exec($comandoGuardarCodigo);
 
         // Comando para actualizar el script prueba.py
-        $comandoActualizarScript = "sed -i '/^archivos =/s/\]/, \"$nombreArchivo.$extension\"\]/' /home/$username/Kaldi-stt/prueba2.py";
+        $comandoActualizarScript = "sed -i '/^archivos =/s/\]/, \"$nombreArchivo.$extension\"\]/' /home/$username/Vosk-stt/nerd-dictation/prueba.py";
         $comandoActualizarScript .= " && ";
-        $comandoActualizarScript .= "sed -i '/^keywords =/s/\]/, \"$keyword\"\]/' /home/$username/Kaldi-stt/prueba2.py";
+        $comandoActualizarScript .= "sed -i '/^keywords =/s/\]/, \"$keyword\"\]/' /home/$username/Vosk-stt/nerd-dictation/prueba.py";
         $ssh->exec($comandoActualizarScript);
 
 
