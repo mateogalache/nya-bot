@@ -18,7 +18,7 @@ class CommunityController extends Controller
             $codes = $codes->where('title', 'like', '%' . $request->termino . '%');
         }
 
-        $codes = $codes->orderBy('title')->get();
+        $codes = $codes->where('private',0)->orderBy('title')->get();
         // Obtener los resultados después de todas las operaciones de filtrado
         $user = User::all();
         return view('community', compact('codes','user'));
