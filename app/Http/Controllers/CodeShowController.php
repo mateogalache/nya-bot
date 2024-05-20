@@ -63,16 +63,16 @@ class CodeShowController extends Controller
         $comandoCrearCarpeta = "mkdir -p /home/$username/aplicaciones";
         $ssh->exec($comandoCrearCarpeta);
 
-        $rutaArchivo = "/home/$username/aplicaciones/$nombreArchivo.$extension";
+        $rutaArchivo = "/home/$username/Vosk-stt/aplicaciones/$nombreArchivo.$extension";
         $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
         $ssh->exec($comandoGuardarCodigo);
 
-        $rutaArchivo = "/home/$username/aplicaciones/$nombreArchivo.$extension";
+        $rutaArchivo = "/home/$username/Vosk-stt/aplicaciones/$nombreArchivo.$extension";
         $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
         $ssh->exec($comandoGuardarCodigo);
 
         // Comando para actualizar el script prueba.py
-        $rutaArchivo = "/home/$username/aplicaciones/$nombreArchivo.$extension";
+        $rutaArchivo = "/home/$username/Vosk-stt/aplicaciones/$nombreArchivo.$extension";
         $comandoGuardarCodigo = "echo '$codigo' > $rutaArchivo";
         $ssh->exec($comandoGuardarCodigo);
 
