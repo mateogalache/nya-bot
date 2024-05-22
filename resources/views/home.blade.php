@@ -49,7 +49,7 @@
                 <div class="descriptionbox">
                     ¡Crea tu propio código y compártelo con la comunidad o
                     guárdatelo para difrutarlo tu sólo! <br>
-                    <h1 class="price">994,99€</h1>
+                    <h1 class="price">50€</h1>
                     <small>OFERTA 24 Horas</small>
                     <button><h1>COMPRAR</h1></button>
                     <small>Envío a domicilio por 4,99€.</small>
