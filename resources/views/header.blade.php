@@ -19,7 +19,7 @@
                 <a href="{{ route('profile') }}">PROFILE</a>
                 <a href="{{ route('logout') }}">LOGOUT</a>
                 <a href="">NYA-BOT</a>
-                <a href="">DOCUMENTACIÓN</a>
+                <a href="/doc">DOCUMENTACIÓN</a>
                 <a href="">CONTÁCTANOS</a>
             </div>
         </label>

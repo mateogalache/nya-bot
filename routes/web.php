@@ -34,6 +34,11 @@ Route::get('/test-db-connection', function () {
 Route::get('db', ['as' => 'db', 'uses' => 'App\Http\Controllers\DBController@showDB']);
 
 
+Route::get('/doc', function () {
+    return view('doc');
+});
+
+
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
