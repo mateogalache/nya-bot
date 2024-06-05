@@ -52,7 +52,7 @@
 
             // Cargar el modelo 3D
             const loader = new THREE.GLTFLoader();
-            loader.load('/models/my_model.gltf', function (gltf) {
+            loader.load('/models/prototipo_modelox.gltf', function (gltf) {
                 scene.add(gltf.scene);
             }, undefined, function (error) {
                 console.error(error);
