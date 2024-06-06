@@ -836,3 +836,61 @@ a{
     display: block;
 }
 
+#container3D canvas{
+    width: 100rem;
+    height: 100rem;
+}
+
+.docprincipal{
+    margin: 50px auto;
+    display: flex;
+    padding-top: 5rem;
+    margin-left: 20rem;
+}
+
+.explorerDoc{
+    display: flex;
+    border: 3px solid #FFC300;
+    border-radius: 30px;
+    padding: 1rem;
+    flex-direction: column;
+    gap: .5rem;
+    height:fit-content;
+}
+
+.contentDoc{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 3px solid #FFC300;
+    border-radius: 30px;
+    margin-left: 3rem;
+    width: 55rem;
+    position: relative;
+    padding-bottom:5rem;
+}
+
+.contentDoc p{
+    text-justify:inherit;
+    text-align: justify;
+    line-height: 1cm;
+    font-weight:400;
+}
+
+.nextDoc{
+    position: absolute;
+    right:1rem;
+    bottom:2rem;
+    display: flex;
+    align-items: center;
+}
+
+.previousDoc{
+    position: absolute;
+    left:1rem;
+    bottom:2rem;
+    display: flex;
+    align-items: center;
+}
+
+

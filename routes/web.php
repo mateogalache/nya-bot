@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CodeShowController;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\CommunityController;
+use App\Http\Controllers\DocController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,9 +35,8 @@ Route::get('/test-db-connection', function () {
 Route::get('db', ['as' => 'db', 'uses' => 'App\Http\Controllers\DBController@showDB']);
 
 
-Route::get('/doc', function () {
-    return view('doc');
-});
+Route::get('/doc', [DocController::class, 'showDoc'])->name('doc');
+
 
 
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
