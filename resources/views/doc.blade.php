@@ -93,6 +93,14 @@
                     Hay 10 chistes guardados en un Json, Nya-Bot escoge uno aleatoriamente y lo dice en voz alta, este es el script completo:
                 </p>
                 <!-- AÑADIR CHISTES  -->
+                @php
+                    $code = App\Models\Codes::where('title','doc5')->first();
+                @endphp
+                <pre class="codeDoc">
+                    <code >
+                        {{$code->code}}
+                    </code>
+                </pre>
                 <p>
                     &nbsp; &nbsp;&nbsp;&nbsp; <strong>f. Música </strong> <br>
                     Hay 10 canciones guardadas en una carpeta, Nya-Bot escoge una al azar y la hace sonar, este es el script completo:
