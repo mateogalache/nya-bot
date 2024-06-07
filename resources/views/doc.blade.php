@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="docprincipal">
+        <h2 style="position:absolute; top:2rem;">DOCUMENTACIÓN</h2>
         <div class="explorerDoc">
             @foreach ($index as $n => $in)
                 <a href="{{route('doc',['num' =>$n])}}" style="color:black;"><p>{{$n+1 . "." . $in}}</p></a>

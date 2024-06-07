@@ -846,6 +846,7 @@ a{
     display: flex;
     padding-top: 5rem;
     margin-left: 20rem;
+    position: relative;
 }
 
 .explorerDoc{
