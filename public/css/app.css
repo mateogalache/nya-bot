@@ -899,7 +899,7 @@ a{
     justify-content: center;
 }
 
-.codeDoc code{
+.codeDoc *{
     display: flex;
     background: lightgray;
     padding: 1rem;
