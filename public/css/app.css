@@ -893,4 +893,26 @@ a{
     align-items: center;
 }
 
+.codeDoc{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.codeDoc code{
+    display: flex;
+    background: lightgray;
+    padding: 1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    width: 80%;
+    overflow: auto;
+}
+
+.dDoc{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
 

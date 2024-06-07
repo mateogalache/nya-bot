@@ -34,6 +34,12 @@
                 <p>
 
                 </p>
+                <div class="dDoc">
+                    <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/K16EH+spin+load"></iframe>
+                </div>
+                <div class="dDoc">
+                    <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/NFAdy+spin+load"></iframe>
+                </div>
             @endif
             @if($num==4)
                 <h3>{{$index[$num]}}</h3>
@@ -43,16 +49,40 @@
                     Se escoge un numero aleatorio entre 0 y 1, si sale 0 Nya-Bot mostrará y dirá cara y si sale uno hará lo mismo, pero con cruz. Mientras se escoge si es cara o cruz, por la pantalla se muestra una moneda que da vueltas, este es el script completo en Python:
                 </p>
                 <!-- AÑADIR TIRAR MONEDA  -->
+                @php
+                    $code = App\Models\Codes::where('title','doc1')->first();
+                @endphp
+                <pre class="codeDoc">
+                    <code >
+                        {{$code->code}}
+                    </code>
+                </pre>
                 <p>
                     &nbsp; &nbsp;&nbsp;&nbsp; <strong>b. Hora</strong> <br>
                     Nya-Bot dirá en voz alta la hora actual que tiene la Raspberry gracias al componente Date, este es el script completo:
                 </p>
                 <!-- AÑADIR HORA  -->
+                @php
+                    $code = App\Models\Codes::where('title','doc2')->first();
+                @endphp
+                <pre class="codeDoc">
+                    <code >
+                        {{$code->code}}
+                    </code>
+                </pre>
                 <p>
                     &nbsp; &nbsp;&nbsp;&nbsp; <strong>c. Despertador/Alarma</strong> <br>
                     Nya-Bot estará constantemente comprobando en un json donde se guardan fechas si concuerda con la actual, si concuerda con la actual sonará una alarma predefinida, este es el script que se encuentra en el script de ejecución ya que debe estar constantemente comprobando:
                 </p>
                 <!-- AÑADIR DESPERTADOR  -->
+                @php
+                    $code = App\Models\Codes::where('title','doc3')->first();
+                @endphp
+                <pre class="codeDoc">
+                    <code >
+                        {{$code->code}}
+                    </code>
+                </pre>
                 <p>
                     &nbsp; &nbsp;&nbsp;&nbsp; <strong>d. Recordatorio</strong> <br>
                     El recordatorio funciona de la misma manera que la alarma, pero en vez de solo sonar la alarma también sonará el mensaje, en este caso un recordatorio que el usuario haya guardado.
@@ -68,17 +98,40 @@
                     Hay 10 canciones guardadas en una carpeta, Nya-Bot escoge una al azar y la hace sonar, este es el script completo:
                 </p>
                 <!-- AÑADIR MUSICA  -->
+                @php
+                    $code = App\Models\Codes::where('title','doc6')->first();
+                @endphp
+                <pre class="codeDoc">
+                    <code >
+                        {{$code->code}}
+                    </code>
+                </pre>
                 <p>
                     &nbsp; &nbsp;&nbsp;&nbsp; <strong>g. Palabras y respuestas predeterminadas   </strong> <br>
                     Hemos añadido diferentes palabras que al detectarlas tenga una respuesta para estas. Estas son las palabras y sus correspondientes respuestas:
                 </p>
                 <!-- AÑADIR RESPUESTAS  -->
+                @php
+                    $code = App\Models\Codes::where('title','doc7')->first();
+                @endphp
+                <pre class="codeDoc">
+                    <code >
+                        {{$code->code}}
+                    </code>
+                </pre>
                 <p>
                     &nbsp; &nbsp;&nbsp;&nbsp; <strong>h. Tiempo   </strong> <br>
                     Nya-Bot te dice el tiempo que hace en tu localización a través de la Api de Open Weather Map con el siguiente script:
                 </p>
                 <!-- AÑADIR TIEMPO  -->
-
+                @php
+                    $code = App\Models\Codes::where('title','doc8')->first();
+                @endphp
+                <pre class="codeDoc">
+                    <code >
+                        {{$code->code}}
+                    </code>
+                </pre>
             @endif
             @if($num==5)
                 <h3>{{$index[$num]}}</h3>
