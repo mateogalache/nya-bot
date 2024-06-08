@@ -171,6 +171,15 @@
             @endif
             @if($num==7)
                 <h3>{{$index[$num]}}</h3>
+                <p>
+                    Una vez claros los componentes del proyecto estos interactúan entre ellos para que todo funcione correctamente.
+                    <br>El robot principalmente detectará las palabras del usuario y las comparará con las palabras claves guardadas en la raspeverry. Si detecta una de estas ejecutará el código correspondiente. Para enviar estos códigos a la Raspberry se hará a través de la página web como se ha explicado en su apartado. El servidor se concentrará a través de SSH a la placa y le enviará el código y la palabra clave correspondiente.
+                    <br>Este es un esquema de cómo funciona:
+                </p>
+                <div class="esquemaDoc">
+                    <img src="images/doc/esquema.png" alt="">
+                </div>
+
             @endif
             @if($num==8)
                 <h3>{{$index[$num]}}</h3>
