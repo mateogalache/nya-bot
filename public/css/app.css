@@ -916,4 +916,10 @@ a{
     justify-content: center;
 }
 
+.imgportada{
+    display:flex;
+    margin:2rem;
+
+}
+
 

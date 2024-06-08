@@ -9,14 +9,19 @@
             @endforeach
         </div>
         <div class = "contentDoc">
-            @if($num == 0)
+            @if($num==0)
+                <h3>BIENVENIDO/A A NYA-BOT</h3>
+                <img class="imgportada" src="images/doc/portada-nya.png">
+                <h4>Hecho por Adrià Andrade, Sira Gabari, Sergi Navarro i Mateo Galache</h4>
+            @endif
+            @if($num == 1)
                 <h3>{{$index[$num]}}</h3>
                 <p>
                     En la era digital, los asistentes virtuales se han convertido en aliados indispensables para gestionar tareas cotidianas. Estos dispositivos no solo facilitan el acceso a información, sino que también optimizan la gestión del tiempo y los recursos, integrándose de manera intuitiva en nuestras vidas diarias.
                     Nya-bot es un innovador proyecto que surge de la pasión y el interés de un grupo de estudiantes por la programación y la electrónica. Para combinar estos campos de conocimiento en una solución práctica y útil, decidimos desarrollar un asistente virtual que fuese funcional y versátil y respetase la privacidad del usuario, ya que en un mundo donde la protección de los datos personales es crucial, puede ser de gran ayuda.
                 </p>
             @endif
-            @if($num==1)
+            @if($num==2)
                 <h3>{{$index[$num]}}</h3>
                 <p>
                     Nya-bot es un innovador asistente virtual desarrollado con una Raspberry Pi Zero y el motor de reconocimiento de voz Vosk. Nya-bot procesa comandos de voz y responde con información, como, por ejemplo, reproducir canciones, informar sobre el tiempo, configurar alarmas, entre otras tareas multimedia.
@@ -24,13 +29,17 @@
                     Durante el desarrollo de Nya-bot nos ha permitido desarrollar nuestros conocimientos adquiridos durante la asignatura y ganar experiencia práctica en el desarrollo de hardware y software. Este proyecto demuestra que, con una simple Raspberry Pi Zero, se pueden crear soluciones tecnológicas avanzadas y personalizadas bastante divertidas y útiles.
                 </p>
             @endif
-            @if ($num==2)
+            @if ($num==3)
                 <h3>{{$index[$num]}}</h3>
                 <p>
-
+                    Para las funciones más importantes del robot, hablar y escuchar al usuario, usamos herramientas de código abierto.
+                    <br>Para el habla fue fácil encontrar un Text-to-speech ya que existen muchos de código abierto y que son fáciles de instalar, al final nos decantamos por usar Pico.
+                    <br>El speech-to-text fue mucho más difícil, estuvimos probando muchas opciones que o eran muy complejas o no funcionaban correctamente en nuestra placa, nos dimos cuenta que al usar la Raspberry Zero muchas de las opciones no eran posibles ya que no es un ordenador lo suficientemente potente, un ejemplo de esto fue con Whisper de OpenAI, este fue el primer programa que conseguimos que funcionase pero los problemas que hubo es que tardaba demasiado en dar una respuesta y entender que se había dicho y al usar el modelo de lenguaje más pequeño entendía las palabras mal.
+                    <br>Para resolver este problema decidimos investigar más otros STT, encontramos Kaldi pero nos pareció muy complejo así que decimos usar Vosk que usa la tecnología de Kaldi y se nos hizo más fácil de entender.
+                    <br>El siguiente problema que nos encontramos fue que parecía que no todos los streams de audio se estaban interpretando por que la tasa de acierto en las palabras era muy bajo, encontramos algo que usaba Vosk también llamado “nerd-dictation” que lo usaba para escribir por ti sin tener que usar el teclado así que decidimos instalarlo en la raspberry y modificar su código para hacer que se comporte de la manera que queremos y hacer esto fue un éxito, conseguimos hacer un Speech-to-text que interpretaba la mayoría de palabras bien y las enseñaba en pantalla una a una, con esto ya todas las funciones del robot necesarias funcionaban correctamente solo faltaría añadir códigos de acciones que se ejecuten al decir ciertas palabras.
                 </p>
             @endif
-            @if($num==3)
+            @if($num==4)
                 <h3>{{$index[$num]}}</h3>
                 <p>
 
@@ -42,7 +51,7 @@
                     <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/NFAdy+spin+load"></iframe>
                 </div>
             @endif
-            @if($num==4)
+            @if($num==5)
                 <h3>{{$index[$num]}}</h3>
                 <p>
                     Con Nya-bot vienen integrados unas funcionalidades que son las siguientes:
@@ -142,7 +151,7 @@
                     </code>
                 </pre>
             @endif
-            @if($num==5)
+            @if($num==6)
                 <h3>{{$index[$num]}}</h3>
                 <p>
                     Como hemos dicho con este proyecto buscamos crear una comunidad y que la gente pueda compartir y utilizar funcionalidades de su Nya-bot con otros usuarios.
@@ -151,35 +160,43 @@
 
                     <br>En la parte de la compra hemos puesto un valor de 50€ ya que es un poco más de lo que hemos gastado en hacer todo el prototipo de esta manera tendríamos un poco de beneficio, aunque no está enfocado en eso este proyecto.
 
-                    <br>En la parte de crear código, el usuario puede escribir su código en un editor de texto tanto en C como en Python. Una vez ha escrito el código tiene que poner un título, la descripción para que otros usuarios sepan que hace ese código, la palabra clave que será la palabra que el robot detecte para activar esta funcionalidad y si quieres que el código sea público o privado. Una vez todo listo puedes escoger si publicarlo en la web, que en ese caso se pondría en la comunidad si lo has puesto público o sólo se vería en tu perfil si lo has puesto privado, o también puedes escoger enviar el código directamente a la placa, de esta manera tu código no se guardará en ningún momento en nuestro servidor y podrás mantener una privacidad completa.
+                    <br>En la parte de <a href="/create">crear código</a>, el usuario puede escribir su código en un editor de texto tanto en C como en Python. Una vez ha escrito el código tiene que poner un título, la descripción para que otros usuarios sepan que hace ese código, la palabra clave que será la palabra que el robot detecte para activar esta funcionalidad y si quieres que el código sea público o privado. Una vez todo listo puedes escoger si publicarlo en la web, que en ese caso se pondría en la comunidad si lo has puesto público o sólo se vería en tu perfil si lo has puesto privado, o también puedes escoger enviar el código directamente a la placa, de esta manera tu código no se guardará en ningún momento en nuestro servidor y podrás mantener una privacidad completa.
 
-                    <br>En la parte de mostrar un código, se mostrará toda la información del código que estés leyendo, además podrás copiar el código con un botón o editarlo. Una vez creas que el código y su configuración es correcta desde esta página puedes enviar el código al Nya-bot.
+                    <br>En la parte de <a href="/codeshow/15">mostrar un código</a> , se mostrará toda la información del código que estés leyendo, además podrás copiar el código con un botón o editarlo. Una vez creas que el código y su configuración es correcta desde esta página puedes enviar el código al Nya-bot.
 
-                    <br>En la parte de comunidad se pueden ver todos los códigos creados por los usuarios que son públicos. Podrás buscar por palabras claves si estás buscando un código en específico.
+                    <br>En la parte de <a href="/community">comunidad</a> se pueden ver todos los códigos creados por los usuarios que son públicos. Podrás buscar por palabras claves si estás buscando un código en específico.
 
-                    <br>Por último, el usuario tendrá un perfil donde podrá ver tanto su nombre de usuario como su email. También puede ver todos sus códigos creados, los cuales puede filtrar por públicos o privados.
+                    <br>Por último, el usuario tendrá un <a href="/profile">perfil</a> donde podrá ver tanto su nombre de usuario como su email. También puede ver todos sus códigos creados, los cuales puede filtrar por públicos o privados.
                 </p>
             @endif
-            @if($num==6)
+            @if($num==7)
                 <h3>{{$index[$num]}}</h3>
             @endif
-            @if($num==7)
+            @if($num==8)
+                <h3>{{$index[$num]}}</h3>
+            @endif
+            @if($num==9)
                 <h3>{{$index[$num]}}</h3>
                 <p>
                     a. Mejorar página web para hacerla más entretenida y atractiva para los usuarios. Implementar sistema de votaciones o de estrellas para valorar los códigos y así filtrar los mejores códigos. Si tus códigos son muy votados y utilizados que puedas conseguir puntos que puedes canjear en skins de esta manera fomentamos que la gente se centre en programar y divertirse con su Nya-bot más que en pagar por una skin.
 
                     Este sería un ejemplo de una tienda de skins y su precio en puntos en vez de por precio real:
                 </p>
-                <div style="display:flex;justify-content:center;"><img src="/images/doc/implementacion_1.png" style="aspect-ratio:15/9;height:15rem;"></div>
+                <div style="display:flex;justify-content:center;"><img src="/images/doc/implementacion_1.png" style="aspect-ratio:13/9;height:15rem;"></div>
                 <p>
                     b. Desde la página web que se pueda también añadir música nueva, ya que puede que la que viene por defecto no le guste al usuario, también poder cambiar las palabras y respuestas predefinidas y poder añadir nuevos chistes. En vez de sólo poder subir códigos a Nya-Bot que también se puedan subir archivos.
                 </p>
-
+                <p>
+                    c. Por la parte más del prototipo nos gustaría que en el futuro el robot pudiera moverse ya que ahora mismo es un bot estático. Podríamos añadir motores e ruedas en un futuro para que el robot pudiera desplazarse .
+                </p>
+                <p>
+                    d. Una futura implementación bastante ambiciosa pero bastante realista seria añadir la capacidad de reconocimiento facial. Gracias a la integración de cámaras como la esp32 cam podríamos añadirlas al bot y hacer una interacción más segura y personalizable. Que pudiera generar respuestas dependiendo de la persona que tenga delante.  También nos ayudaria a augmentar la seguridad y la privacidad de bot ya que sería una buena medida de seguridad para iniciar el robot.
+                </p>
             @endif
-            @if($num==8)
+            @if($num==10)
                 <h3>{{$index[$num]}}</h3>
             @endif
-            @if($num==9)
+            @if($num==11)
                 <h3>{{$index[$num]}}</h3>
             @endif
 
