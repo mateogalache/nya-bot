@@ -12,7 +12,7 @@
             @if($num==0)
                 <h3>BIENVENIDO/A A NYA-BOT</h3>
                 <img class="imgportada" src="images/doc/portada-nya.png">
-                <h4>Hecho por Adrià Andrade, Sira Gabari, Sergi Navarro i Mateo Galache</h4>
+                <h4>Hecho por Adrià Andrade, Sira Gabari, Sergi Navarro y Mateo Galache</h4>
             @endif
             @if($num == 1)
                 <h3>{{$index[$num]}}</h3>
