@@ -18,15 +18,15 @@
                 <h3>{{$index[$num]}}</h3>
                 <p>
                     En la era digital, los asistentes virtuales se han convertido en aliados indispensables para gestionar tareas cotidianas. Estos dispositivos no solo facilitan el acceso a información, sino que también optimizan la gestión del tiempo y los recursos, integrándose de manera intuitiva en nuestras vidas diarias.
-                    Nya-bot es un innovador proyecto que surge de la pasión y el interés de un grupo de estudiantes por la programación y la electrónica. Para combinar estos campos de conocimiento en una solución práctica y útil, decidimos desarrollar un asistente virtual que fuese funcional y versátil y respetase la privacidad del usuario, ya que en un mundo donde la protección de los datos personales es crucial, puede ser de gran ayuda.
+                    <br>Nya-bot es un innovador proyecto que surge de la pasión y el interés de un grupo de estudiantes por la programación y la electrónica. Para combinar estos campos de conocimiento en una solución práctica y útil, decidimos desarrollar un asistente virtual que fuese funcional y versátil y respetase la privacidad del usuario, ya que en un mundo donde la protección de los datos personales es crucial, puede ser de gran ayuda.
                 </p>
             @endif
             @if($num==2)
                 <h3>{{$index[$num]}}</h3>
                 <p>
                     Nya-bot es un innovador asistente virtual desarrollado con una Raspberry Pi Zero y el motor de reconocimiento de voz Vosk. Nya-bot procesa comandos de voz y responde con información, como, por ejemplo, reproducir canciones, informar sobre el tiempo, configurar alarmas, entre otras tareas multimedia.
-                    Además de las capacidades del robot, hemos desarrollado una plataforma web donde los usuarios pueden crear y compartir códigos para personalizar las funciones de Nya-bot. La web incluye un apartado de comunidad para ver y utilizar los códigos desarrollados por otros usuarios, fomentando la colaboración y el intercambio de ideas.
-                    Durante el desarrollo de Nya-bot nos ha permitido desarrollar nuestros conocimientos adquiridos durante la asignatura y ganar experiencia práctica en el desarrollo de hardware y software. Este proyecto demuestra que, con una simple Raspberry Pi Zero, se pueden crear soluciones tecnológicas avanzadas y personalizadas bastante divertidas y útiles.
+                    <br>Además de las capacidades del robot, hemos desarrollado una plataforma web donde los usuarios pueden crear y compartir códigos para personalizar las funciones de Nya-bot. La web incluye un apartado de comunidad para ver y utilizar los códigos desarrollados por otros usuarios, fomentando la colaboración y el intercambio de ideas.
+                    <br>Durante el desarrollo de Nya-bot nos ha permitido desarrollar nuestros conocimientos adquiridos durante la asignatura y ganar experiencia práctica en el desarrollo de hardware y software. Este proyecto demuestra que, con una simple Raspberry Pi Zero, se pueden crear soluciones tecnológicas avanzadas y personalizadas bastante divertidas y útiles.
                 </p>
             @endif
             @if ($num==3)
@@ -42,25 +42,40 @@
             @if($num==4)
                 <h3>{{$index[$num]}}</h3>
                 <p>
-                    Para hacer el prototipo hemos utlizado los siguientes componentes:
+                    Los principales componentes que forman el robot son los siguientes:
                 </p>
-                <p><strong>RaspBerry Pi Zero: </strong>Utilizado como la base del sistema para el control y la ejecución de funciones.</p>
+                <p><strong>RaspBerry Pi Zero: </strong>microordenador utilizado como la base del sistema para el control y la ejecución de funciones. Este modelo de Raspberry Pi fue elegido tras valorar su coste, su capacidad de procesamiento y su tamaño. </p>
                 <div class="dDoc">
                     <img src="images/doc/rasp.png" width="450" height="300" alt="">
                 </div>
-                <p><strong>Modelo 3ds max: </strong>Diseñado con Modelos 3D Max para la estructura y el diseño del robot.</p>
-                <div class="dDoc">
-                    <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/K16EH+spin+load"></iframe>
-                </div>
-                <p><strong>Impresión 3d: </strong>Componentes impresos en 3D para la construcción física del robot.</p>
-                <div class="dDoc">
-                    <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/NFAdy+spin+load"></iframe>
-                </div>
-                <p><strong>Pantalla led: </strong>Integrada para mostrar información y feedback visual.</p>
+                <p><strong>OLED SSD1306:  </strong>pantalla a través de la que se muestra el feedback visual del robot. De nuevo, se eligió este modelo debido a su coste y tamaño, y a su compatibilidad con la Raspberry. </p>
                 <div class="dDoc">
                     <img src="images/doc/pantalla.png" width="200" height="200" alt="">
                 </div>
-                <p><strong>Altavoces y Micro: </strong>Componentes de audio esenciales para la interacción de voz bidireccional.</p>
+                <p>
+                    También se valoró incluir chips de input y output de audio, ya que la idea inicial era la de crear un aparato compacto que incluyera todos los componentes necesarios para interactuar con el asistente virtual de la manera más sencilla y natural posible. Sin embargo, tras evaluarlo, se decidió finalmente no añadir estos componentes dentro del prototipo, debido a la complejidad añadida de integración y el aumento del costo. En su lugar, se dejó una salida de audio estándar para permitir al usuario conectar micrófonos y altavoces externos.
+                    <br>La idea para el prototipo era la de crear una caja que contuviera todos los componentes electrónicos de manera segura y accesible. Se quería obtener un diseño funcional y estético, con forma de gato para darle al robot una apariencia amigable y creativa.
+                    <br>También se buscaba ofrecer al usuario la posibilidad de personalizar su robot, tanto a través de los elementos decorativos como prácticos. Como uno de los propósitos del proyecto es el de animar a los usuarios a desarrollar su asistente y añadir nuevas funcionalidades, una de las ideas a futuro es la de ofrecer distintos modelos y tamaños que permitan incluir nuevos componentes según las necesidades de los usuarios.
+                    <br>Para comenzar, se hizo un diseño experimental del prototipo utilizando 3d Max. Como referencia, se usaron imágenes generadas por IA y se estudiaron otros aparatos similares que existen en el mercado, como Alexa de Amazon o Rabit R1 de Teenage Engineering.
+                </p>
+                <div class="dDoc">
+                    <img src="images/doc/nya_1.png" width="500" height="300" alt="">
+                </div>
+                <p>
+                    A partir de este modelo inicial, se hicieron pruebas físicas con un modelo construido en cartón, para comprobar la colocación de los componentes electrónicos y ajustar las medidas.
+                </p>
+                <div class="dDoc">
+                    <img src="images/doc/nya_2.png" width="450" height="300" alt="">
+                </div>
+                <p>
+                    Tras comentarlo en clase y recibir feedback del diseño, se retocó el modelo en 3ds Max para ajustar la estructura del robot, con la intención de imprimir el resultado en 3D. Finalmente esto no fue posible debido a la falta de tiempo, por lo que se creó un modelo físico utilizando cartón y goma Eva para poder presentar el producto final.
+                </p>
+                <div class="dDoc">
+                    <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/K16EH+spin+load"></iframe>
+                    <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/NFAdy+spin+load"></iframe>
+                </div>
+                <div class="dDoc">
+                </div>
             @endif
             @if($num==5)
                 <h3>{{$index[$num]}}</h3>
