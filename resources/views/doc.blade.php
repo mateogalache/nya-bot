@@ -42,14 +42,25 @@
             @if($num==4)
                 <h3>{{$index[$num]}}</h3>
                 <p>
-
+                    Para hacer el prototipo hemos utlizado los siguientes componentes:
                 </p>
+                <p><strong>RaspBerry Pi Zero: </strong>Utilizado como la base del sistema para el control y la ejecución de funciones.</p>
+                <div class="dDoc">
+                    <img src="images/doc/rasp.png" width="450" height="300" alt="">
+                </div>
+                <p><strong>Modelo 3ds max: </strong>Diseñado con Modelos 3D Max para la estructura y el diseño del robot.</p>
                 <div class="dDoc">
                     <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/K16EH+spin+load"></iframe>
                 </div>
+                <p><strong>Impresión 3d: </strong>Componentes impresos en 3D para la construcción física del robot.</p>
                 <div class="dDoc">
                     <iframe allowfullscreen width="500" height="375" loading="lazy" frameborder="0" src="https://p3d.in/e/NFAdy+spin+load"></iframe>
                 </div>
+                <p><strong>Pantalla led: </strong>Integrada para mostrar información y feedback visual.</p>
+                <div class="dDoc">
+                    <img src="images/doc/pantalla.png" width="200" height="200" alt="">
+                </div>
+                <p><strong>Altavoces y Micro: </strong>Componentes de audio esenciales para la interacción de voz bidireccional.</p>
             @endif
             @if($num==5)
                 <h3>{{$index[$num]}}</h3>
@@ -204,13 +215,17 @@
             @endif
             @if($num==10)
                 <h3>{{$index[$num]}}</h3>
+                <p>
+                    En estos meses hemos obtenido conclusiones que creemos que en el futuro nos pueden ayudar tanto en el mundo laboral como en el ámbito personal.
+                    <br>Una de las conclusiones más valiosas fue saber trabajar en equipo, ya que tenía una fecha límite y cada integrante del grupo debía organizarse para hacer las cosas a tiempo.
+                    <br>Otra conclusión que sacamos con este proyecto es la importancia que tiene el prototipo, en nuestro caso el prototipo lo diséñanos en los últimos dias y esto nos perjudico un poco. Gracias a este proyecto nos hemos dado cuenta que deberíamos hacer más diseños y prototipos durante los meses del proyecto, aunque sean muy básicos.
+                    <br>Además, aprendimos la importancia de la planificación. Una planificación adecuada desde el inicio del proyecto es crucial para evitar contratiempos y asegurar que todas las fases del desarrollo se completen a tiempo. Esto incluye no solo el diseño sino también la prueba del prototipo.
+                    <br>Otro aprendizaje clave fue la gestión del tiempo. Aprendimos a manejar nuestro tiempo de manera eficiente, estableciendo prioridades y plazos para cada tarea.
+                    <br>La adaptabilidad y la resolución de problemas también fueron habilidades esenciales que desarrollamos. A lo largo del proyecto, nos enfrentamos a diversos desafíos técnicos. Gracias a la capacidad de adaptarnos y encontrar soluciones creativas nos ayudó a solucionar los problemas a tiempo.
+                    <br>Finalmente, entendimos la importancia del feedback. Recibir y analizar el feedback de nuestros compañeros y profesores fue vital para mejorar el diseño y la funcionalidad de Nya-bot. Este feedback nos permitió identificar áreas de mejora y ajustar nuestras estrategias.
+                    <br>En conclusión, el desarrollo de Nya-bot ha sido una experiencia enriquecedora que nos ha proporcionado valiosas lecciones y habilidades que podremos aplicar en futuros proyectos tanto académicos como profesionales.
+                </p>
             @endif
-            @if($num==11)
-                <h3>{{$index[$num]}}</h3>
-            @endif
-
-
-
 
             @php
                 $next = $num + 1;
